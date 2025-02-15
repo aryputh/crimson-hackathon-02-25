@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
         rb.velocityX = movementVector.normalized.x * playerStats.Speed;
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && Mathf.Abs(rb.velocityY) < 1)
         {
             rb.AddForce(Vector2.up * playerStats.JumpSpeed);
         }
