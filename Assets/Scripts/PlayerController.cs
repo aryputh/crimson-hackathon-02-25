@@ -31,4 +31,9 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector2.up * playerStats.JumpSpeed);
         }
     }
+
+    public void ChangePlayerStats(PlayerStats playerStats)
+    {
+        this.playerStats = playerStats;
+    }
 }

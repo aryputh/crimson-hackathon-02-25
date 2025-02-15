@@ -4,7 +4,18 @@ using UnityEngine;
 
 public class Black : Color
 {
-    public Black(string colorName) : base(colorName)
+    [SerializeField] private string colorName;
+    [SerializeField] private Color color;
+    [SerializeField] private PlayerStats playerStats;
+
+    public Black(string colorName, Color color) : base(colorName, color)
     {
+        this.colorName = colorName;
+        this.color = color;
+    }
+
+    public override PlayerStats GetColorStats()
+    {
+        return playerStats;
     }
 }

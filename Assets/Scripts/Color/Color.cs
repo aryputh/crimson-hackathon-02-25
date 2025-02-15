@@ -4,10 +4,14 @@ using UnityEngine;
 
 public abstract class Color : MonoBehaviour
 {
-    public string colorName = string.Empty;
+    private string colorName;
+    private Color color;
 
-    public Color(string colorName)
+    public Color(string colorName, Color color)
     {
         this.colorName = colorName;
+        this.color = color;
     }
+
+    public abstract PlayerStats GetColorStats();
 }
