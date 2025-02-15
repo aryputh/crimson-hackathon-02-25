@@ -5,12 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private PlayerStats playerStats;
+    [SerializeField] private GroundCheck groundCheck;
 
     private Rigidbody2D rb;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        groundCheck = GetComponentInChildren<GroundCheck>();
     }
 
     private void Update()
@@ -26,7 +28,7 @@ public class PlayerController : MonoBehaviour
 
         rb.velocityX = movementVector.normalized.x * playerStats.Speed;
 
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocityY) < 0.5f)
+        if (Input.GetButtonDown("Jump") && groundCheck.IsGrounded)
         {
             rb.AddForce(Vector2.up * playerStats.JumpSpeed);
         }
