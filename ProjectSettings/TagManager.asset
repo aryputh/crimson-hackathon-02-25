@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Canvas
+    uniqueID: 3223757369
+    locked: 0
+  - name: Paint
+    uniqueID: 669904683
+    locked: 0
+  - name: Player
+    uniqueID: 2817140883
+    locked: 0
