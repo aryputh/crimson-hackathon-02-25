@@ -2,16 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Color : MonoBehaviour
+public class Color : MonoBehaviour
 {
-    private string colorName;
-    private Color color;
+    [SerializeField] private PlayerStats playerStats;
+    [SerializeField] private string colorName;
+    [SerializeField] private Color32 colorHex;
 
-    public Color(string colorName, Color color)
+    public Color(PlayerStats playerStats, string colorName, Color32 colorHex)
     {
+        this.playerStats = playerStats;
         this.colorName = colorName;
-        this.color = color;
+        this.colorHex = colorHex;
     }
 
-    public abstract PlayerStats GetColorStats();
+    public Color32 GetColorHex()
+    {
+        return colorHex;
+    }
+
+    public PlayerStats GetColorStats()
+    {
+        return playerStats;
+    }
+
+    public string GetColorName()
+    {
+        return colorName;
+    }
 }

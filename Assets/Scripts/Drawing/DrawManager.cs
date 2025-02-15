@@ -5,6 +5,8 @@ using UnityEngine;
 public class DrawManager : MonoBehaviour
 {
     [SerializeField] private Line linePrefab;
+    [SerializeField] private ColorManager colorManager;
+    [SerializeField] private int canvasLayerIndex;
 
     private Camera cam;
     private Line currentLine;
@@ -22,8 +24,15 @@ public class DrawManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            currentLine = Instantiate(linePrefab, Vector3.zero, Quaternion.identity);
-            currentLine.SetPosition(mousePos);
+            RaycastHit2D hit = Physics2D.Raycast(cam.ScreenToWorldPoint(Input.mousePosition), Vector3.zero);
+            
+            if (hit.collider != null && hit.collider.gameObject.layer == canvasLayerIndex)
+            {
+                currentLine = Instantiate(linePrefab, Vector3.zero, Quaternion.identity);
+                currentLine.SetPosition(mousePos);
+                linePrefab.GetComponent<LineRenderer>().startColor = colorManager.GetCurrentColor().GetColorHex();
+                linePrefab.GetComponent<LineRenderer>().endColor = colorManager.GetCurrentColor().GetColorHex();
+            }
         }
 
         if (Input.GetMouseButton(0) && currentLine != null)
