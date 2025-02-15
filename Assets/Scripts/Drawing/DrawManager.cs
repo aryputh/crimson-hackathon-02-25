@@ -9,7 +9,7 @@ public class DrawManager : MonoBehaviour
     private Camera cam;
     private Line currentLine;
 
-    public const float RESOLUTION = 0.01f;
+    public const float RESOLUTION = 0.1f;
 
     private void Start()
     {
