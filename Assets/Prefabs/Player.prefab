@@ -161,13 +161,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e5fc547bfa62d848919d2f1933a1934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: {fileID: 11400000, guid: 402b6386ec91970499d8690c03378e09, type: 2}
+  playerStats: {fileID: 11400000, guid: 328d8a34e66c8b646b2307ac149006d4, type: 2}
   spawnPoint: {x: -5.704672, y: -3.134581}
   groundChecker: {fileID: 9053975992344572701}
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  colorManager: {fileID: 0}
 --- !u!58 &1662476508649861170
 CircleCollider2D:
   m_ObjectHideFlags: 0
