@@ -32,6 +32,7 @@ Transform:
   m_Children:
   - {fileID: 8482375793760478933}
   - {fileID: 3615163422299326125}
+  - {fileID: 7676895262754925339}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3066426016126191772
@@ -49,6 +50,7 @@ MonoBehaviour:
   colors:
   - {fileID: 7752610968819826188}
   - {fileID: 4896483577794848708}
+  - {fileID: 2049092584411631175}
   currentColorIndex: 0
 --- !u!1 &1200921618597300887
 GameObject:
@@ -144,3 +146,50 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: 328d8a34e66c8b646b2307ac149006d4, type: 2}
   colorName: black
   color: {r: 0.1882353, g: 0.1882353, b: 0.1882353, a: 1}
+--- !u!1 &8459000217776341840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7676895262754925339}
+  - component: {fileID: 2049092584411631175}
+  m_Layer: 0
+  m_Name: Blue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7676895262754925339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8459000217776341840}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3826790234326428763}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2049092584411631175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8459000217776341840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef4af45a1356a14794b0adfd2b2914d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 11400000, guid: 3f5e2be8ffdcd464dbd167aa2bd2f7fc, type: 2}
+  colorName: blue
+  color: {r: 0, g: 0.6988158, b: 1, a: 1}
