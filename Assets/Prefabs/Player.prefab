@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 402b6386ec91970499d8690c03378e09, type: 2}
-  spawnPoint: {x: -5, y: -3.275573}
+  spawnPoint: {x: -5.704672, y: -3.134581}
   groundChecker: {fileID: 9053975992344572701}
   groundCheckRadius: 0.2
   groundLayer:
