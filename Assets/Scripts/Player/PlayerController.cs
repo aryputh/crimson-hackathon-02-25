@@ -5,15 +5,17 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private PlayerStats playerStats;
-    [SerializeField] private GroundCheck groundCheck;
     [SerializeField] private Vector2 spawnPoint;
+    [SerializeField] private GameObject groundChecker;
+    [SerializeField] private float groundCheckRadius;
+    [SerializeField] private LayerMask groundLayer;
 
+    private bool isGrounded;
     private Rigidbody2D rb;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        groundCheck = GetComponentInChildren<GroundCheck>();
         transform.position = spawnPoint;
     }
 
@@ -21,6 +23,7 @@ public class PlayerController : MonoBehaviour
     {
         HandleMovement();
 
+        isGrounded = Physics2D.OverlapCircle(groundChecker.transform.position, groundCheckRadius, groundLayer);
         if (Input.GetButtonDown("Reset"))
         {
             DestroyLines();
@@ -35,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
         rb.velocityX = movementVector.normalized.x * playerStats.Speed;
 
-        if (Input.GetButtonDown("Jump") && groundCheck.IsGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(Vector2.up * playerStats.JumpSpeed);
         }
