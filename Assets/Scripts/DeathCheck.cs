@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class DeathCheck : MonoBehaviour
 {
-    [SerializeField] private float spawnX;
-    [SerializeField] private float spawnY;
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.transform.position = new Vector2(spawnX, spawnY);
+            PlayerController controller = collision.gameObject.GetComponent<PlayerController>();
+
+            collision.gameObject.transform.position = controller.SpawnPoint;
         }
     }
 }

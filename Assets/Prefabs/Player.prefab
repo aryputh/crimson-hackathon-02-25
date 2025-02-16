@@ -163,6 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 402b6386ec91970499d8690c03378e09, type: 2}
   groundCheck: {fileID: 9013731133409968031}
+  spawnPoint: {x: -5, y: -2.5}
 --- !u!58 &1662476508649861170
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private PlayerStats playerStats;
     [SerializeField] private GroundCheck groundCheck;
+    [SerializeField] private Vector2 spawnPoint;
 
     private Rigidbody2D rb;
 
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         groundCheck = GetComponentInChildren<GroundCheck>();
+        transform.position = spawnPoint;
     }
 
     private void Update()
@@ -53,5 +55,10 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(l.gameObject);
         }
+    }
+
+    public Vector2 SpawnPoint
+    {
+        get => spawnPoint;
     }
 }
