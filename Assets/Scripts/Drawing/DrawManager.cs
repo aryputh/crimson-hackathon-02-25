@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class DrawManager : MonoBehaviour
@@ -21,11 +22,10 @@ public class DrawManager : MonoBehaviour
     private void Update()
     {
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
-            
             if (hit.collider != null && hit.collider.gameObject.layer == canvasLayerIndex)
             {
                 currentLine = Instantiate(linePrefab, Vector3.zero, Quaternion.identity);
@@ -37,7 +37,14 @@ public class DrawManager : MonoBehaviour
 
         if (Input.GetMouseButton(0) && currentLine != null)
         {
-            currentLine.SetPosition(mousePos);
+            if (hit.collider != null && hit.collider.gameObject.layer == canvasLayerIndex)
+            {
+                currentLine.SetPosition(mousePos);
+            }
+            else
+            {
+                currentLine = null;
+            }
         }
     }
 }
