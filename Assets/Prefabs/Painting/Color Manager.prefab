@@ -190,6 +190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cef4af45a1356a14794b0adfd2b2914d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: {fileID: 11400000, guid: 3f5e2be8ffdcd464dbd167aa2bd2f7fc, type: 2}
+  playerStats: {fileID: 11400000, guid: 701b867c65e33a74a90e3b0de6278de7, type: 2}
   colorName: blue
   color: {r: 0, g: 0.6988158, b: 1, a: 1}

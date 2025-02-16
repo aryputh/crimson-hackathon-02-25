@@ -34,6 +34,6 @@ public class ColorManager : MonoBehaviour
             }
         }
 
-        return new PlayerStats();
+        return ScriptableObject.CreateInstance<PlayerStats>();
     }
 }
