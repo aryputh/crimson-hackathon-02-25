@@ -56,8 +56,19 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector2.up * playerStats.JumpSpeed, ForceMode2D.Impulse);
             animator.Play("Jumping");
         }
-
-        animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
+        else if (rb.velocity.y < -1)
+        {
+            animator.Play("Falling");
+        }
+        else if (Mathf.Abs(rb.velocity.x) > 0)
+        {
+            animator.Play("Walking");
+        }
+        else
+        {
+            animator.Play("Idling");
+        }
+        
     }
 
     private void UpdatePlayerStatsBasedOnGround()
