@@ -13,10 +13,12 @@ public class PlayerController : MonoBehaviour
 
     private bool isGrounded;
     private Rigidbody2D rb;
+    private Animator animator;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         transform.position = spawnPoint;
     }
 
@@ -48,6 +50,10 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(Vector2.up * playerStats.JumpSpeed, ForceMode2D.Impulse);
         }
+
+        animator.SetBool("isJumping", !isGrounded);
+        animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("yVelocity", rb.velocity.y);
     }
 
     private void UpdatePlayerStatsBasedOnGround()
