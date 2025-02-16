@@ -544,7 +544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Title Here
+  m_text: ScribbleBound
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 448622b4a7895904c9f17d008e64f72f, type: 2}
   m_sharedMaterial: {fileID: -7177743934310945379, guid: 448622b4a7895904c9f17d008e64f72f, type: 2}
