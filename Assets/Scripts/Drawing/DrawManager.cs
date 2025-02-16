@@ -61,6 +61,10 @@ public class DrawManager : MonoBehaviour
                 PausePaintingSound();
             }
         }
+        else
+        {
+            PausePaintingSound();
+        }
     }
 
     private void StartPaintingSound()
