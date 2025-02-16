@@ -15,5 +15,9 @@ public class PlayerStats : ScriptableObject
 
     public float MovementSpeed => movementSpeed;
     public float JumpSpeed => jumpSpeed;
-    public bool TogglesGravity => togglesGravity;
+    public bool TogglesGravity
+    {
+        get => togglesGravity;
+        set => togglesGravity = value;
+    }
 }

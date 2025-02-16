@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
 
         if (previousGravityState != playerStats.TogglesGravity)
         {
+            Debug.Log("Updating from update function.");
             previousGravityState = playerStats.TogglesGravity;
             HandleGravityState();
         }
@@ -126,6 +127,11 @@ public class PlayerController : MonoBehaviour
             else
             {
                 playerStats = defaultStats;
+            }
+
+            if (previousGravityState == true && playerStats.TogglesGravity != true)
+            {
+                playerStats.TogglesGravity = true;
             }
         }
     }
