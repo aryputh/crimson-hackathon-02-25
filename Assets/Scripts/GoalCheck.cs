@@ -5,20 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class GoalCheck : MonoBehaviour
 {
-    [SerializeField] private int nextSceneIndex;
+    [SerializeField] private int sceneIndex;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             // Successful level completion, go to next screen.
             Debug.Log("Go to next level!");
+            GoToNextLevel();
         }
-        GoToNextLevel();
     }
 
     private void GoToNextLevel()
     {
-        SceneManager.LoadSceneAsync(nextSceneIndex);
+        SceneManager.LoadSceneAsync(sceneIndex);
     }
 }
