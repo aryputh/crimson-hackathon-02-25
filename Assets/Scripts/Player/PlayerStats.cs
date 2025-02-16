@@ -10,14 +10,10 @@ public class PlayerStats : ScriptableObject
     private float movementSpeed;
     [SerializeField, Tooltip("Jump speed of player.")]
     private float jumpSpeed;
+    [SerializeField, Tooltip("Does this toggle gravity?")]
+    private bool togglesGravity;
 
-    public float MovementSpeed
-    {
-        get { return movementSpeed; }
-    }
-
-    public float JumpSpeed
-    {
-        get { return jumpSpeed; }
-    }
+    public float MovementSpeed => movementSpeed;
+    public float JumpSpeed => jumpSpeed;
+    public bool TogglesGravity => togglesGravity;
 }
