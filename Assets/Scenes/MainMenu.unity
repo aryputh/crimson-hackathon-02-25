@@ -1116,8 +1116,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 235, y: 60}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 235, y: -26.837883}
+  m_SizeDelta: {x: 200, y: 223.6758}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &935546118
 MonoBehaviour:
@@ -1141,7 +1141,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Carsyn Favorite
 
-    <size=20>test</size>'
+    <size=20>2d/3d art
+
+    interface</size>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 448622b4a7895904c9f17d008e64f72f, type: 2}
   m_sharedMaterial: {fileID: -7177743934310945379, guid: 448622b4a7895904c9f17d008e64f72f, type: 2}
@@ -1176,7 +1178,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2153,8 +2155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 60}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: -26.837883}
+  m_SizeDelta: {x: 200, y: 223.6758}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1540416376
 MonoBehaviour:
@@ -2178,7 +2180,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Aryan Puthran
 
-    <size=20>test</size>'
+    <size=20>programming
+
+    drawing mechanic
+
+    level
+    design</size>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 448622b4a7895904c9f17d008e64f72f, type: 2}
   m_sharedMaterial: {fileID: -7177743934310945379, guid: 448622b4a7895904c9f17d008e64f72f, type: 2}
@@ -2213,7 +2220,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2502,8 +2509,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -235, y: 60}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -235, y: -26.837883}
+  m_SizeDelta: {x: 200, y: 223.6758}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1769964017
 MonoBehaviour:
@@ -2527,7 +2534,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'James Abitria
 
-    <size=20>test</size>'
+    <size=20>player controller
+
+    level design</size>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 448622b4a7895904c9f17d008e64f72f, type: 2}
   m_sharedMaterial: {fileID: -7177743934310945379, guid: 448622b4a7895904c9f17d008e64f72f, type: 2}
@@ -2562,7 +2571,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
