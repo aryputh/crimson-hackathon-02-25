@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private SpriteRenderer sr;
 
+    public Vector2 SpawnPoint => spawnPoint;
+
     private void Awake()
     {
         defaultStats = playerStats;
@@ -126,7 +128,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     private void DestroyLines()
     {
         Line[] lines = FindObjectsByType<Line>(FindObjectsSortMode.None);
@@ -137,5 +138,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public Vector2 SpawnPoint => spawnPoint;
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Death"))
+        {
+            DestroyLines();
+            this.gameObject.transform.position = spawnPoint;
+        }
+    }
 }
