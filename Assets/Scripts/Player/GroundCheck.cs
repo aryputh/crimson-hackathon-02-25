@@ -16,7 +16,7 @@ public class GroundCheck : MonoBehaviour
         get => isGrounded;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (!isGrounded)
         {
@@ -27,10 +27,7 @@ public class GroundCheck : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (isGrounded)
-        {
-            Debug.Log("In the air.");
-            isGrounded = false;
-        }
+        Debug.Log("In the air.");
+        isGrounded = false;
     }
 }

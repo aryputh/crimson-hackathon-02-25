@@ -24,14 +24,14 @@ public class DrawManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit2D hit = Physics2D.Raycast(cam.ScreenToWorldPoint(Input.mousePosition), Vector3.zero);
+            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
             
             if (hit.collider != null && hit.collider.gameObject.layer == canvasLayerIndex)
             {
                 currentLine = Instantiate(linePrefab, Vector3.zero, Quaternion.identity);
                 currentLine.SetPosition(mousePos);
-                linePrefab.GetComponent<LineRenderer>().startColor = colorManager.GetCurrentColor().GetColorHex();
-                linePrefab.GetComponent<LineRenderer>().endColor = colorManager.GetCurrentColor().GetColorHex();
+                currentLine.GetComponent<LineRenderer>().startColor = colorManager.GetCurrentColor().GetColorHex();
+                currentLine.GetComponent<LineRenderer>().endColor = colorManager.GetCurrentColor().GetColorHex();
             }
         }
 
