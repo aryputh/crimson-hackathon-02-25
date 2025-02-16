@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
         Vector2 movementVector = new Vector2(x, 0);
 
-        rb.velocityX = movementVector.normalized.x * playerStats.Speed;
+        rb.velocityX = movementVector.normalized.x * playerStats.MovementSpeed;
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {

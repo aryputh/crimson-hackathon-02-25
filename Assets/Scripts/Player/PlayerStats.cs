@@ -7,13 +7,13 @@ using UnityEngine;
 public class PlayerStats : ScriptableObject
 {
     [SerializeField, Tooltip("Movement speed of player.")]
-    private float speed;
+    private float movementSpeed;
     [SerializeField, Tooltip("Jump speed of player.")]
     private float jumpSpeed;
 
-    public float Speed
+    public float MovementSpeed
     {
-        get { return speed; }
+        get { return movementSpeed; }
     }
 
     public float JumpSpeed
