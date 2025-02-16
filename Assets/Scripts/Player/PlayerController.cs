@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Reset"))
         {
             DestroyLines();
+            this.gameObject.transform.position = spawnPoint;
         }
     }
 
