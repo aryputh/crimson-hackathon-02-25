@@ -34,13 +34,14 @@ public class PlayerController : MonoBehaviour
     {
         HandleMovement();
 
+        isGrounded = Physics2D.OverlapCircle(groundChecker.transform.position, groundCheckRadius, groundLayer);
+
         if (previousGravityState != playerStats.TogglesGravity)
         {
+            previousGravityState = playerStats.TogglesGravity;
             HandleGravityState();
         }
 
-        isGrounded = Physics2D.OverlapCircle(groundChecker.transform.position, groundCheckRadius, groundLayer);
-        
         if (isGrounded)
         {
             UpdatePlayerStatsBasedOnGround();
@@ -90,6 +91,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandleGravityState()
     {
+        Debug.Log("Triggered gravity change.");
         rb.gravityScale *= playerStats.TogglesGravity ? -1 : 1;
         transform.localScale = playerStats.TogglesGravity ? new Vector2(1, -1) : new Vector2 (1, 1);
     }
