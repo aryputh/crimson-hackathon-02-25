@@ -54,6 +54,8 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(movementVector.normalized.x * playerStats.MovementSpeed, rb.velocity.y);
         sr.flipX = movementVector.x < 0;
 
+        animator.SetBool("isGrounded", isGrounded);
+
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             if (rb.gravityScale > 0)
@@ -65,19 +67,15 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(Vector2.down * playerStats.JumpSpeed, ForceMode2D.Impulse);
             }
 
-            animator.Play("Jumping");
-        }
-        else if (rb.velocity.y < -1)
-        {
-            animator.Play("Falling");
+            animator.SetTrigger("jumped");
         }
         else if (Mathf.Abs(rb.velocity.x) > 0)
         {
-            animator.Play("Walking");
+            animator.SetBool("isMovingX", true);
         }
         else
         {
-            animator.Play("Idling");
+            animator.SetBool("isMovingX", false);
         }
     }
 
