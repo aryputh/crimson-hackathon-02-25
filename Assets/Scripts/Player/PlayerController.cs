@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
     private void HandleGravityState()
     {
         Debug.Log("Triggered gravity change.");
-        rb.gravityScale *= -1;
+        rb.gravityScale = playerStats.GravityInfluence == 1 ? Mathf.Abs(rb.gravityScale) : -1 * Mathf.Abs(rb.gravityScale);
         transform.localScale = playerStats.GravityInfluence == 1 ? new Vector2(1, 1) : new Vector2(1, -1);
     }
 
