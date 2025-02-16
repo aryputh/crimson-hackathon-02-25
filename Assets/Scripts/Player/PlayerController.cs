@@ -12,12 +12,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private ColorManager colorManager;
 
     private bool isGrounded;
+    private PlayerStats defaultStats;
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer sr;
 
     private void Awake()
     {
+        defaultStats = playerStats;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
@@ -72,6 +74,10 @@ public class PlayerController : MonoBehaviour
                 Color groundColor = lineRenderer.startColor;
 
                 playerStats = colorManager.GetStatsFromColor(groundColor);
+            }
+            else
+            {
+                playerStats = defaultStats;
             }
         }
     }
