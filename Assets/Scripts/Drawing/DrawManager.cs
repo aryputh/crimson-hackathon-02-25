@@ -6,6 +6,7 @@ public class DrawManager : MonoBehaviour
 {
     [SerializeField] private Line linePrefab;
     [SerializeField] private ColorManager colorManager;
+    [SerializeField] private AudioSource paintAudioSource;
 
     [Header("Layer Settings")]
     [SerializeField] private LayerMask drawableLayers;
@@ -39,6 +40,8 @@ public class DrawManager : MonoBehaviour
                     LineRenderer lineRenderer = currentLine.GetComponent<LineRenderer>();
                     lineRenderer.startColor = brushColor.GetColor();
                     lineRenderer.endColor = brushColor.GetColor();
+
+                    StartPaintingSound();
                 }
             }
         }
@@ -48,11 +51,39 @@ public class DrawManager : MonoBehaviour
             if (hit.collider != null && ((1 << hit.collider.gameObject.layer) & noDrawLayers) == 0)
             {
                 currentLine.SetPosition(mousePos);
+
+                ResumePaintingSound();
             }
             else
             {
                 currentLine = null;
+
+                PausePaintingSound();
             }
+        }
+    }
+
+    private void StartPaintingSound()
+    {
+        if (!paintAudioSource.isPlaying)
+        {
+            paintAudioSource.Play();
+        }
+    }
+
+    private void ResumePaintingSound()
+    {
+        if (!paintAudioSource.isPlaying)
+        {
+            paintAudioSource.UnPause();
+        }
+    }
+
+    private void PausePaintingSound()
+    {
+        if (paintAudioSource.isPlaying)
+        {
+            paintAudioSource.Pause();
         }
     }
 }
