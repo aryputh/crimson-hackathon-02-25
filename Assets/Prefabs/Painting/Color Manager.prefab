@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 3633136828337442481}
   - component: {fileID: 4014799448070842426}
   m_Layer: 0
-  m_Name: Orange
+  m_Name: Magenta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 6e0b401ad60c6a546a6c9e0621ad22a8, type: 2}
-  colorName: orange
-  color: {r: 0.83396226, g: 0.41460434, b: 0.09913132, a: 1}
+  colorName: magenta
+  color: {r: 0.94716984, g: 0.04825197, b: 0.929642, a: 1}
 --- !u!1 &7181496200170005412
 GameObject:
   m_ObjectHideFlags: 0
