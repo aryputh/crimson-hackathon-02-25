@@ -23,8 +23,14 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         HandleMovement();
-        HandleGroundTracking();
+
+        isGrounded = Physics2D.OverlapCircle(groundChecker.transform.position, groundCheckRadius, groundLayer);
         
+        if (isGrounded)
+        {
+            UpdatePlayerStatsBasedOnGround();
+        }
+
         if (Input.GetButtonDown("Reset"))
         {
             DestroyLines();
@@ -36,47 +42,40 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
 
         Vector2 movementVector = new Vector2(x, 0);
-
-        rb.velocityX = movementVector.normalized.x * playerStats.MovementSpeed;
+        rb.velocity = new Vector2(movementVector.normalized.x * playerStats.MovementSpeed, rb.velocity.y);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.AddForce(Vector2.up * playerStats.JumpSpeed);
+            rb.AddForce(Vector2.up * playerStats.JumpSpeed, ForceMode2D.Impulse);
         }
     }
 
-    private void HandleGroundTracking()
+    private void UpdatePlayerStatsBasedOnGround()
     {
-        Collider2D platform = Physics2D.OverlapCircle(groundChecker.transform.position, groundCheckRadius, groundLayer);
+        Collider2D hit = Physics2D.OverlapCircle(groundChecker.transform.position, groundCheckRadius, groundLayer);
 
-        if (platform != null)
+        if (hit != null)
         {
-            isGrounded = true;
-            if (platform.gameObject.name == "Line(Clone)")
+            LineRenderer lineRenderer = hit.GetComponent<LineRenderer>();
+
+            if (lineRenderer != null)
             {
-                
+                Color groundColor = lineRenderer.startColor;
+
+                playerStats = colorManager.GetStatsFromColor(groundColor);
             }
         }
     }
 
-    public void ChangePlayerStats(PlayerStats playerStats)
-    {
-        this.playerStats = playerStats;
-    }
-
     private void DestroyLines()
     {
-        Debug.Log("Destroying lines.");
         Line[] lines = FindObjectsByType<Line>(FindObjectsSortMode.None);
-        
-        foreach (Line l in lines)
+
+        foreach (Line line in lines)
         {
-            Destroy(l.gameObject);
+            Destroy(line.gameObject);
         }
     }
 
-    public Vector2 SpawnPoint
-    {
-        get => spawnPoint;
-    }
+    public Vector2 SpawnPoint => spawnPoint;
 }
