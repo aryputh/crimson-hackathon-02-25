@@ -986,6 +986,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.55
       objectReference: {fileID: 0}
+    - target: {fileID: 5175696161762907864, guid: d6874ad542134a24a8b3db2b579ebc52, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5688351045258044960, guid: d6874ad542134a24a8b3db2b579ebc52, type: 3}
       propertyPath: groundCheck
       value: 
@@ -997,6 +1001,14 @@ PrefabInstance:
     - target: {fileID: 6645757669370119263, guid: d6874ad542134a24a8b3db2b579ebc52, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645757669370119263, guid: d6874ad542134a24a8b3db2b579ebc52, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9053975992344572701, guid: d6874ad542134a24a8b3db2b579ebc52, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1153,6 +1165,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linePrefab: {fileID: 1331627588920182, guid: e0d56fcf8884dd144930ebd045d329e1, type: 3}
   colorManager: {fileID: 1046124550}
+  drawableLayers:
+    serializedVersion: 2
+    m_Bits: 320
+  noDrawLayers:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,7 +1527,7 @@ GameObject:
   - component: {fileID: 1506057360}
   - component: {fileID: 1506057359}
   - component: {fileID: 1506057362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Painting Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2386,7 +2404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6944007830514777376, guid: b354b2865c2a3a84ea00d731a8fc49bd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6944007830514777376, guid: b354b2865c2a3a84ea00d731a8fc49bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

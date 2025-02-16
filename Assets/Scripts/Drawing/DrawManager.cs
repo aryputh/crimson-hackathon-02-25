@@ -7,6 +7,10 @@ public class DrawManager : MonoBehaviour
     [SerializeField] private Line linePrefab;
     [SerializeField] private ColorManager colorManager;
 
+    [Header("Layer Settings")]
+    [SerializeField] private LayerMask drawableLayers;
+    [SerializeField] private LayerMask noDrawLayers;
+
     private Camera cam;
     private Line currentLine;
 
@@ -20,11 +24,11 @@ public class DrawManager : MonoBehaviour
     private void Update()
     {
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
+        RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero, 0.1f);
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (hit.collider != null && (hit.collider.gameObject.layer == LayerMask.NameToLayer("Default") || hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground")))
+            if (hit.collider != null && ((1 << hit.collider.gameObject.layer) & noDrawLayers) == 0)
             {
                 currentLine = Instantiate(linePrefab, Vector3.zero, Quaternion.identity);
                 currentLine.SetPosition(mousePos);
@@ -41,7 +45,7 @@ public class DrawManager : MonoBehaviour
 
         if (Input.GetMouseButton(0) && currentLine != null)
         {
-            if (hit.collider != null && (hit.collider.gameObject.layer == LayerMask.NameToLayer("Default") || hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground")))
+            if (hit.collider != null && ((1 << hit.collider.gameObject.layer) & noDrawLayers) == 0)
             {
                 currentLine.SetPosition(mousePos);
             }
