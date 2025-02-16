@@ -1995,6 +1995,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1046124550}
+    - target: {fileID: 476398279814381581, guid: 76e6b7143f2dd19459e3ebfee50cfed2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 924027792018990068, guid: 76e6b7143f2dd19459e3ebfee50cfed2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2003,6 +2007,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1046124550}
+    - target: {fileID: 2496298123663802222, guid: 76e6b7143f2dd19459e3ebfee50cfed2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660622529249908362, guid: 76e6b7143f2dd19459e3ebfee50cfed2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4494638864382850087, guid: 76e6b7143f2dd19459e3ebfee50cfed2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2382,11 +2394,11 @@ SceneRoots:
   - {fileID: 1532934751}
   - {fileID: 2687736}
   - {fileID: 346956284}
+  - {fileID: 275287844}
   - {fileID: 479273102}
   - {fileID: 1539624552}
   - {fileID: 4373040533112247884}
   - {fileID: 1444469701}
   - {fileID: 1251443470}
   - {fileID: 1989549732}
-  - {fileID: 275287844}
   - {fileID: 1896439338}
