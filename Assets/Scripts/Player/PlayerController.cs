@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private ColorManager colorManager;
 
     private bool isGrounded;
+    private bool previousGravityState;
     private PlayerStats defaultStats;
     private Rigidbody2D rb;
     private Animator animator;
@@ -24,11 +25,19 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         transform.position = spawnPoint;
+
+        previousGravityState = playerStats.TogglesGravity;
+        HandleGravityState();
     }
 
     private void Update()
     {
         HandleMovement();
+
+        if (previousGravityState != playerStats.TogglesGravity)
+        {
+            HandleGravityState();
+        }
 
         isGrounded = Physics2D.OverlapCircle(groundChecker.transform.position, groundCheckRadius, groundLayer);
         
@@ -53,7 +62,15 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.AddForce(Vector2.up * playerStats.JumpSpeed, ForceMode2D.Impulse);
+            if (playerStats.TogglesGravity)
+            {
+                rb.AddForce(Vector2.down * playerStats.JumpSpeed, ForceMode2D.Impulse);
+            }
+            else
+            {
+                rb.AddForce(Vector2.up * playerStats.JumpSpeed, ForceMode2D.Impulse);
+            }
+
             animator.Play("Jumping");
         }
         else if (rb.velocity.y < -1)
@@ -68,7 +85,12 @@ public class PlayerController : MonoBehaviour
         {
             animator.Play("Idling");
         }
-        
+    }
+
+    private void HandleGravityState()
+    {
+        rb.gravityScale *= playerStats.TogglesGravity ? -1 : 1;
+        transform.localScale = playerStats.TogglesGravity ? new Vector2(1, -1) : new Vector2 (1, 1);
     }
 
     private void UpdatePlayerStatsBasedOnGround()
