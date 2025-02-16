@@ -16,4 +16,9 @@ public class PlayerStats : ScriptableObject
     public float MovementSpeed => movementSpeed;
     public float JumpSpeed => jumpSpeed;
     public int GravityInfluence => gravityInfluence;
+
+    public void SetGravityInfluence(int gravityInfluence)
+    {
+        this.gravityInfluence = gravityInfluence;
+    }
 }
