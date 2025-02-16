@@ -18,6 +18,11 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         HandleMovement();
+
+        if (Input.GetButtonDown("Reset"))
+        {
+            DestroyLines();
+        }
     }
 
     private void HandleMovement()
@@ -37,5 +42,16 @@ public class PlayerController : MonoBehaviour
     public void ChangePlayerStats(PlayerStats playerStats)
     {
         this.playerStats = playerStats;
+    }
+
+    private void DestroyLines()
+    {
+        Debug.Log("Destroying lines.");
+        Line[] lines = FindObjectsByType<Line>(FindObjectsSortMode.None);
+        
+        foreach (Line l in lines)
+        {
+            Destroy(l.gameObject);
+        }
     }
 }
