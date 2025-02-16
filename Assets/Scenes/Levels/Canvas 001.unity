@@ -1940,22 +1940,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 209429373794760432, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Size.x
-      value: 1.0758674
-      objectReference: {fileID: 0}
-    - target: {fileID: 209429373794760432, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Size.y
-      value: 1.3307575
-      objectReference: {fileID: 0}
-    - target: {fileID: 209429373794760432, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.01258406
-      objectReference: {fileID: 0}
-    - target: {fileID: 209429373794760432, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.194089
-      objectReference: {fileID: 0}
     - target: {fileID: 708293084855813006, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.2
@@ -1996,89 +1980,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1287225152214194006, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1287225152214194006, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2259847747632187205, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2259847747632187205, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3224115697081805307, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3224115697081805307, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6454057323931628440, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Size.x
-      value: 1.0062265
-      objectReference: {fileID: 0}
-    - target: {fileID: 6454057323931628440, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Size.y
-      value: 1.3130879
-      objectReference: {fileID: 0}
-    - target: {fileID: 6454057323931628440, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.0067715645
-      objectReference: {fileID: 0}
-    - target: {fileID: 6454057323931628440, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.02811265
-      objectReference: {fileID: 0}
-    - target: {fileID: 7273896829380283701, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Size.x
-      value: 0.98111105
-      objectReference: {fileID: 0}
-    - target: {fileID: 7273896829380283701, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Size.y
-      value: 1.2957525
-      objectReference: {fileID: 0}
-    - target: {fileID: 7273896829380283701, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.013630629
-      objectReference: {fileID: 0}
-    - target: {fileID: 7273896829380283701, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.0005723238
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670651997115440422, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Size.x
-      value: 1.0664388
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670651997115440422, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Size.y
-      value: 1.2113764
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670651997115440422, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.006424248
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670651997115440422, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.16086233
-      objectReference: {fileID: 0}
     - target: {fileID: 8626196329591212743, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
       propertyPath: m_Name
       value: Painting Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630933404800527507, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630933404800527507, guid: d1b233e7d4c27da409ef390bc63e657a, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
