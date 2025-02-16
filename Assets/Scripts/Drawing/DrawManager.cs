@@ -37,8 +37,8 @@ public class DrawManager : MonoBehaviour
                 if (brushColor != null)
                 {
                     LineRenderer lineRenderer = currentLine.GetComponent<LineRenderer>();
-                    lineRenderer.startColor = brushColor.Color;
-                    lineRenderer.endColor = brushColor.Color;
+                    lineRenderer.startColor = brushColor.GetColor();
+                    lineRenderer.endColor = brushColor.GetColor();
                 }
             }
         }

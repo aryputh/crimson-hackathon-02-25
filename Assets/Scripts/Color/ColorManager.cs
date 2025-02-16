@@ -4,36 +4,42 @@ using UnityEngine;
 
 public class ColorManager : MonoBehaviour
 {
-    [SerializeField] private List<BrushColor> colors = new List<BrushColor>();
+    [SerializeField] private List<BrushColor> brushColors = new List<BrushColor>();
     [SerializeField] private int currentColorIndex = 0;
 
     public BrushColor GetCurrentColor()
     {
-        if (currentColorIndex >= 0 && currentColorIndex < colors.Count)
+        if (currentColorIndex >= 0 && currentColorIndex < brushColors.Count)
         {
-            return colors[currentColorIndex];
+            return brushColors[currentColorIndex];
         }
         return null;
     }
 
     public void SetCurrentColor(int index)
     {
-        if (index >= 0 && index < colors.Count)
+        if (index >= 0 && index < brushColors.Count)
         {
             currentColorIndex = index;
         }
     }
 
-    public PlayerStats GetStatsFromColor(Color groundColor)
+    public PlayerStats GetStatsFromColor(Color color)
     {
-        foreach (var colorData in colors)
+        string detectedHex = ColorUtility.ToHtmlStringRGB(color);  // Convert detected color to Hex
+
+        foreach (BrushColor brushColor in brushColors)
         {
-            if (colorData.Color == groundColor)
+            string brushHex = ColorUtility.ToHtmlStringRGB(brushColor.GetColor());  // Convert stored color to Hex
+
+            if (brushHex == detectedHex)  // Compare as strings
             {
-                return colorData.Stats;
+                Debug.Log($"Found BrushColor for {detectedHex}. Returning PlayerStats reference.");
+                return brushColor.GetPlayerStats();
             }
         }
 
+        Debug.LogWarning($"No matching BrushColor found for {detectedHex}! Returning default stats.");
         return ScriptableObject.CreateInstance<PlayerStats>();
     }
 }

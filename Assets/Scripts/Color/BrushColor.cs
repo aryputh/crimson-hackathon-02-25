@@ -9,6 +9,6 @@ public class BrushColor : MonoBehaviour
     [SerializeField] private Color color;
 
     public string Name => name;
-    public Color Color => color;
-    public PlayerStats Stats => playerStats;
+    public Color GetColor() => color;
+    public PlayerStats GetPlayerStats() => playerStats;
 }

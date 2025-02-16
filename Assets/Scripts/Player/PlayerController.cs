@@ -105,7 +105,20 @@ public class PlayerController : MonoBehaviour
             {
                 Color groundColor = lineRenderer.startColor;
 
-                playerStats = colorManager.GetStatsFromColor(groundColor);
+                Debug.Log($"Ground detected: {groundColor}");
+
+                PlayerStats statsFromColor = colorManager.GetStatsFromColor(groundColor);
+
+                if (statsFromColor != null)
+                {
+                    playerStats = statsFromColor;
+                    Debug.Log($"Player stats updated: Speed = {playerStats.MovementSpeed}, Jump = {playerStats.JumpSpeed}");
+                }
+                else
+                {
+                    Debug.LogWarning("GetStatsFromColor() returned null! Using default stats.");
+                    playerStats = defaultStats;
+                }
             }
             else
             {
@@ -113,6 +126,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
 
     private void DestroyLines()
     {

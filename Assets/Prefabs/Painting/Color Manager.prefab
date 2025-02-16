@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e247548953ffdd4ea459b9d3ea4c3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colors:
+  brushColors:
   - {fileID: 7752610968819826188}
   - {fileID: 4896483577794848708}
   - {fileID: 2049092584411631175}
