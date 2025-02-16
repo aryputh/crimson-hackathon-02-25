@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0b908b7ac5b93ae459e5c5b65e9d148d
+guid: e738d9ad43019eb4fb3f086b3f9c08a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3731513150810511183
-    second: CanvasTear_0
+      213: -1690711190242838187
+    second: Paintbrush_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +57,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 7
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CanvasTear_0
+      name: Paintbrush_0
       rect:
         serializedVersion: 2
-        x: 239
-        y: 170
-        width: 49
-        height: 158
+        x: 1
+        y: 0
+        width: 77
+        height: 97
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4752c4b07ff8c330800000000000000
-      internalID: 3731513150810511183
+      spriteID: 5593cc751236988e0800000000000000
+      internalID: -1690711190242838187
       vertices: []
       indices: 
       edges: []
@@ -149,15 +149,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      CanvasTear_0: 3731513150810511183
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
