@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject groundChecker;
     [SerializeField] private float groundCheckRadius;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private ColorManager colorManager;
 
     private bool isGrounded;
     private Rigidbody2D rb;
@@ -22,8 +23,8 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         HandleMovement();
-
-        isGrounded = Physics2D.OverlapCircle(groundChecker.transform.position, groundCheckRadius, groundLayer);
+        HandleGroundTracking();
+        
         if (Input.GetButtonDown("Reset"))
         {
             DestroyLines();
@@ -41,6 +42,20 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(Vector2.up * playerStats.JumpSpeed);
+        }
+    }
+
+    private void HandleGroundTracking()
+    {
+        Collider2D platform = Physics2D.OverlapCircle(groundChecker.transform.position, groundCheckRadius, groundLayer);
+
+        if (platform != null)
+        {
+            isGrounded = true;
+            if (platform.gameObject.name == "Line(Clone)")
+            {
+                
+            }
         }
     }
 
