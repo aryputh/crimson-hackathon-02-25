@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private ColorManager colorManager;
 
     private bool isGrounded;
-    private bool previousGravityState;
+    private int currentGravityInfluence;
     private PlayerStats defaultStats;
     private Rigidbody2D rb;
     private Animator animator;
@@ -21,13 +21,11 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         defaultStats = playerStats;
+        currentGravityInfluence = playerStats.GravityInfluence;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         transform.position = spawnPoint;
-
-        previousGravityState = playerStats.TogglesGravity;
-        HandleGravityState();
     }
 
     private void Update()
@@ -35,13 +33,6 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
 
         isGrounded = Physics2D.OverlapCircle(groundChecker.transform.position, groundCheckRadius, groundLayer);
-
-        if (previousGravityState != playerStats.TogglesGravity)
-        {
-            Debug.Log("Updating from update function.");
-            previousGravityState = playerStats.TogglesGravity;
-            HandleGravityState();
-        }
 
         if (isGrounded)
         {
@@ -65,13 +56,13 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            if (playerStats.TogglesGravity)
+            if (rb.gravityScale > 0)
             {
-                rb.AddForce(Vector2.down * playerStats.JumpSpeed, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.up * playerStats.JumpSpeed, ForceMode2D.Impulse);
             }
             else
             {
-                rb.AddForce(Vector2.up * playerStats.JumpSpeed, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.down * playerStats.JumpSpeed, ForceMode2D.Impulse);
             }
 
             animator.Play("Jumping");
@@ -93,8 +84,8 @@ public class PlayerController : MonoBehaviour
     private void HandleGravityState()
     {
         Debug.Log("Triggered gravity change.");
-        rb.gravityScale *= playerStats.TogglesGravity ? -1 : 1;
-        transform.localScale = playerStats.TogglesGravity ? new Vector2(1, -1) : new Vector2 (1, 1);
+        rb.gravityScale *= -1;
+        transform.localScale = playerStats.GravityInfluence == 1 ? new Vector2(1, 1) : new Vector2(1, -1);
     }
 
     private void UpdatePlayerStatsBasedOnGround()
@@ -116,6 +107,12 @@ public class PlayerController : MonoBehaviour
                 if (statsFromColor != null)
                 {
                     playerStats = statsFromColor;
+
+                    if (playerStats.GravityInfluence != 0 && currentGravityInfluence != playerStats.GravityInfluence)
+                    {
+                        HandleGravityState();
+                    }
+
                     Debug.Log($"Player stats updated: Speed = {playerStats.MovementSpeed}, Jump = {playerStats.JumpSpeed}");
                 }
                 else
@@ -127,11 +124,6 @@ public class PlayerController : MonoBehaviour
             else
             {
                 playerStats = defaultStats;
-            }
-
-            if (previousGravityState == true && playerStats.TogglesGravity != true)
-            {
-                playerStats.TogglesGravity = true;
             }
         }
     }
