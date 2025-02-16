@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class DrawManager : MonoBehaviour
 {
     [SerializeField] private Line linePrefab;
     [SerializeField] private ColorManager colorManager;
-    [SerializeField] private int canvasLayerIndex;
 
     private Camera cam;
     private Line currentLine;
@@ -26,7 +24,7 @@ public class DrawManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (hit.collider != null && hit.collider.gameObject.layer == canvasLayerIndex)
+            if (hit.collider != null && (hit.collider.gameObject.layer == LayerMask.NameToLayer("Default") || hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground")))
             {
                 currentLine = Instantiate(linePrefab, Vector3.zero, Quaternion.identity);
                 currentLine.SetPosition(mousePos);
@@ -37,7 +35,7 @@ public class DrawManager : MonoBehaviour
 
         if (Input.GetMouseButton(0) && currentLine != null)
         {
-            if (hit.collider != null && hit.collider.gameObject.layer == canvasLayerIndex)
+            if (hit.collider != null && (hit.collider.gameObject.layer == LayerMask.NameToLayer("Default") || hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground")))
             {
                 currentLine.SetPosition(mousePos);
             }
