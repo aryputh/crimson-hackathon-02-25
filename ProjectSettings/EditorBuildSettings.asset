@@ -11,5 +11,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Canvas 001.unity
     guid: 6c478e51b1170fb4d8a72b2098372b7d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Canvas 002.unity
+    guid: 46d4d096b767a4747ba9f4d919cd6dd1
+  - enabled: 1
+    path: Assets/Scenes/Levels/Canvas 003.unity
+    guid: 281c61caae8974f4781d38c5f18e2b05
+  - enabled: 1
+    path: Assets/Scenes/Levels/Canvas 004.unity
+    guid: 84229b01e78cc834c925c776cb9334ec
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
