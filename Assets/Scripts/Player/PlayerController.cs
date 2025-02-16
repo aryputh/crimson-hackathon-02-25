@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -144,6 +145,8 @@ public class PlayerController : MonoBehaviour
         {
             DestroyLines();
             this.gameObject.transform.position = spawnPoint;
+            rb.gravityScale = Mathf.Abs(rb.gravityScale);
+            transform.localScale = new Vector2(1, 1);
         }
     }
 }
