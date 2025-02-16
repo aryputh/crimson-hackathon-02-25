@@ -1392,18 +1392,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4309740416124272396, guid: d6874ad542134a24a8b3db2b579ebc52, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 5175696161762907864, guid: d6874ad542134a24a8b3db2b579ebc52, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5688351045258044960, guid: d6874ad542134a24a8b3db2b579ebc52, type: 3}
-      propertyPath: groundCheck
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5688351045258044960, guid: d6874ad542134a24a8b3db2b579ebc52, type: 3}
       propertyPath: colorManager
       value: 
@@ -1411,10 +1399,6 @@ PrefabInstance:
     - target: {fileID: 6645757669370119263, guid: d6874ad542134a24a8b3db2b579ebc52, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 9053975992344572701, guid: d6874ad542134a24a8b3db2b579ebc52, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
