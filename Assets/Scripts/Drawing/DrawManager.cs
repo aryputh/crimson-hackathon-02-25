@@ -28,8 +28,14 @@ public class DrawManager : MonoBehaviour
             {
                 currentLine = Instantiate(linePrefab, Vector3.zero, Quaternion.identity);
                 currentLine.SetPosition(mousePos);
-                currentLine.GetComponent<LineRenderer>().startColor = colorManager.GetCurrentColor().GetColorHex();
-                currentLine.GetComponent<LineRenderer>().endColor = colorManager.GetCurrentColor().GetColorHex();
+
+                BrushColor brushColor = colorManager.GetCurrentColor();
+                if (brushColor != null)
+                {
+                    LineRenderer lineRenderer = currentLine.GetComponent<LineRenderer>();
+                    lineRenderer.startColor = brushColor.Color;
+                    lineRenderer.endColor = brushColor.Color;
+                }
             }
         }
 

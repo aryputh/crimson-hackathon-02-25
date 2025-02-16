@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BlackPlayerStats
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  jumpSpeed: 650
+  jumpSpeed: 10

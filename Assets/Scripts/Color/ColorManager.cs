@@ -4,18 +4,36 @@ using UnityEngine;
 
 public class ColorManager : MonoBehaviour
 {
-    [SerializeField] private Color[] colors;
-    [SerializeField] private PlayerController playerController;
-    [SerializeField] private Color currentColor;
+    [SerializeField] private List<BrushColor> colors = new List<BrushColor>();
+    [SerializeField] private int currentColorIndex = 0;
 
-    public Color GetCurrentColor()
+    public BrushColor GetCurrentColor()
     {
-        return currentColor;
+        if (currentColorIndex >= 0 && currentColorIndex < colors.Count)
+        {
+            return colors[currentColorIndex];
+        }
+        return null;
     }
 
-    public void SetActiveColor(int index)
+    public void SetCurrentColor(int index)
     {
-        currentColor = colors[index];
-        playerController.ChangePlayerStats(currentColor.GetColorStats());
+        if (index >= 0 && index < colors.Count)
+        {
+            currentColorIndex = index;
+        }
+    }
+
+    public PlayerStats GetStatsFromColor(Color groundColor)
+    {
+        foreach (var colorData in colors)
+        {
+            if (colorData.Color == groundColor)
+            {
+                return colorData.Stats;
+            }
+        }
+
+        return new PlayerStats();
     }
 }

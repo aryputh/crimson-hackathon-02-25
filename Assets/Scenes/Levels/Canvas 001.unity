@@ -591,7 +591,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1046124550}
         m_TargetAssemblyTypeName: ColorManager, Assembly-CSharp
-        m_MethodName: SetActiveColor
+        m_MethodName: SetCurrentColor
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -990,6 +990,10 @@ PrefabInstance:
       propertyPath: groundCheck
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5688351045258044960, guid: d6874ad542134a24a8b3db2b579ebc52, type: 3}
+      propertyPath: colorManager
+      value: 
+      objectReference: {fileID: 1046124550}
     - target: {fileID: 6645757669370119263, guid: d6874ad542134a24a8b3db2b579ebc52, type: 3}
       propertyPath: m_Name
       value: Player
@@ -999,17 +1003,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6874ad542134a24a8b3db2b579ebc52, type: 3}
---- !u!114 &451044313 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5688351045258044960, guid: d6874ad542134a24a8b3db2b579ebc52, type: 3}
-  m_PrefabInstance: {fileID: 451044312}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e5fc547bfa62d848919d2f1933a1934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &570935454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,9 +1393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 328d8a34e66c8b646b2307ac149006d4, type: 2}
   colorName: black
-  colorHex:
-    serializedVersion: 2
-    rgba: 4278190080
+  color: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1046124549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,8 +1426,7 @@ MonoBehaviour:
   colors:
   - {fileID: 1041773016}
   - {fileID: 1629115735}
-  playerController: {fileID: 451044313}
-  currentColor: {fileID: 1041773016}
+  currentColorIndex: 0
 --- !u!4 &1046124551
 Transform:
   m_ObjectHideFlags: 0
@@ -1954,9 +1944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 9a7ca6659cb86b945bec37f97bd2f07a, type: 2}
   colorName: yellow
-  colorHex:
-    serializedVersion: 2
-    rgba: 4278241535
+  color: {r: 1, g: 0.76862746, b: 0, a: 1}
 --- !u!4 &1691398350 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1216161044980270726, guid: 365d9c32d93d9604e83843fa5e2b1504, type: 3}
@@ -2202,7 +2190,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1046124550}
         m_TargetAssemblyTypeName: ColorManager, Assembly-CSharp
-        m_MethodName: SetActiveColor
+        m_MethodName: SetCurrentColor
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
