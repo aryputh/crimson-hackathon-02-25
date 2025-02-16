@@ -61,16 +61,21 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            if (rb.gravityScale > 0)
-            {
-                rb.AddForce(Vector2.up * playerStats.JumpSpeed, ForceMode2D.Impulse);
-            }
-            else
-            {
-                rb.AddForce(Vector2.down * playerStats.JumpSpeed, ForceMode2D.Impulse);
-            }
+            Collider2D collider = Physics2D.OverlapCircle(groundChecker.transform.position, groundCheckRadius, groundLayer);
 
-            animator.SetTrigger("jumped");
+            if (collider.gameObject.tag != "CanvasEdge")
+            {
+                if (rb.gravityScale > 0)
+                {
+                    rb.AddForce(Vector2.up * playerStats.JumpSpeed, ForceMode2D.Impulse);
+                }
+                else
+                {
+                    rb.AddForce(Vector2.down * playerStats.JumpSpeed, ForceMode2D.Impulse);
+                }
+
+                animator.SetTrigger("jumped");
+            }
         }
         else if (Mathf.Abs(rb.velocity.x) > 0)
         {
