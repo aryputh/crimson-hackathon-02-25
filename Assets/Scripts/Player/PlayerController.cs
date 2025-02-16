@@ -57,15 +57,6 @@ public class PlayerController : MonoBehaviour
             animator.Play("Jumping");
         }
 
-        if (rb.velocity.y < -1 && !isGrounded)
-        {
-            animator.Play("Falling");
-        }
-        else
-        {
-            animator.Play("Idling");
-        }
-
         animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
     }
 
