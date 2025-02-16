@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GoalCheck : MonoBehaviour
 {
+    [SerializeField] private int nextSceneIndex;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
@@ -11,9 +14,11 @@ public class GoalCheck : MonoBehaviour
             // Successful level completion, go to next screen.
             Debug.Log("Go to next level!");
         }
-        else
-        {
-            Debug.Log("Triggered but not found.");
-        }
+        GoToNextLevel();
+    }
+
+    private void GoToNextLevel()
+    {
+        SceneManager.LoadSceneAsync(nextSceneIndex);
     }
 }
