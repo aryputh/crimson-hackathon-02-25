@@ -14,11 +14,13 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private Rigidbody2D rb;
     private Animator animator;
+    private SpriteRenderer sr;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
         transform.position = spawnPoint;
     }
 
@@ -45,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
         Vector2 movementVector = new Vector2(x, 0);
         rb.velocity = new Vector2(movementVector.normalized.x * playerStats.MovementSpeed, rb.velocity.y);
+        sr.flipX = movementVector.x < 0;
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
