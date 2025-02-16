@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 2599002161055405640}
   - component: {fileID: 5688351045258044960}
   - component: {fileID: 1662476508649861170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 328d8a34e66c8b646b2307ac149006d4, type: 2}
-  spawnPoint: {x: -5.704672, y: -3.134581}
+  spawnPoint: {x: -3.47, y: -3.134581}
   groundChecker: {fileID: 9053975992344572701}
   groundCheckRadius: 0.2
   groundLayer:
