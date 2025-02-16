@@ -54,11 +54,19 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(Vector2.up * playerStats.JumpSpeed, ForceMode2D.Impulse);
+            animator.Play("Jumping");
         }
 
-        animator.SetBool("isJumping", !isGrounded);
+        if (rb.velocity.y < -1 && !isGrounded)
+        {
+            animator.Play("Falling");
+        }
+        else
+        {
+            animator.Play("Idling");
+        }
+
         animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
-        animator.SetFloat("yVelocity", rb.velocity.y);
     }
 
     private void UpdatePlayerStatsBasedOnGround()
