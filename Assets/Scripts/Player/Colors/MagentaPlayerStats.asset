@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d641a71784765d42a19abd4835659d7, type: 3}
-  m_Name: OrangePlayerStats
+  m_Name: MagentaPlayerStats
   m_EditorClassIdentifier: 
   movementSpeed: 3
   jumpSpeed: 10
