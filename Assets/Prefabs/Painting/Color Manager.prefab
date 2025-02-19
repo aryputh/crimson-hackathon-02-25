@@ -53,6 +53,11 @@ MonoBehaviour:
   - {fileID: 4896483577794848708}
   - {fileID: 2049092584411631175}
   - {fileID: 4014799448070842426}
+  paletteColors:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentColorIndex: 0
 --- !u!1 &1200921618597300887
 GameObject:

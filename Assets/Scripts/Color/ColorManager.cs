@@ -5,7 +5,18 @@ using UnityEngine;
 public class ColorManager : MonoBehaviour
 {
     [SerializeField] private List<BrushColor> brushColors = new List<BrushColor>();
+    [SerializeField] private List<GameObject> paletteColors = new List<GameObject>();
     [SerializeField] private int currentColorIndex = 0;
+
+    private void Start()
+    {
+        if (brushColors.Count != paletteColors.Count)
+        {
+            Debug.LogError("ColorManager: brushColors and paletteColors have a different length.");
+        }
+
+        paletteColors[currentColorIndex].SetActive(true);
+    }
 
     public BrushColor GetCurrentColor()
     {
@@ -21,6 +32,13 @@ public class ColorManager : MonoBehaviour
         if (index >= 0 && index < brushColors.Count)
         {
             currentColorIndex = index;
+
+            foreach (var paletteColor in paletteColors)
+            {
+                paletteColor.SetActive(false);
+            }
+
+            paletteColors[currentColorIndex].SetActive(true);
         }
     }
 
