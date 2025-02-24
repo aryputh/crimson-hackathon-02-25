@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 3adf8a7ed22bda14e86744801e0ee7d2
+guid: e81306f2691a92c4ea1759082a2f025b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5952691817376281094
-    second: CanvasNEW_0
+      213: 129852007401772687
+    second: Canvas Easel_0
+  - first:
+      213: -5305298593090021912
+    second: Canvas Easel_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CanvasNEW_0
+      name: Canvas Easel_0
       rect:
         serializedVersion: 2
-        x: 220
-        y: 0
-        width: 1072
-        height: 826
+        x: 680
+        y: 682
+        width: 111
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +143,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60276105ba53c9250800000000000000
-      internalID: 5952691817376281094
+      spriteID: f86dd8676b35dc100800000000000000
+      internalID: 129852007401772687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canvas Easel_1
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 0
+        width: 860
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e55d7bc90bcf56b0800000000000000
+      internalID: -5305298593090021912
       vertices: []
       indices: 
       edges: []
@@ -157,7 +181,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CanvasNEW_0: 5952691817376281094
+      Canvas Easel_0: 129852007401772687
+      Canvas Easel_1: -5305298593090021912
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
