@@ -279,6 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 654566720}
   hoverColor: {r: 1, g: 0.76862746, b: 0, a: 1}
+  colorChangeSpeed: 0.1
 --- !u!1 &111386056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,6 +1072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 859375801}
   hoverColor: {r: 1, g: 0.76862746, b: 0, a: 1}
+  colorChangeSpeed: 0.1
 --- !u!1 &623909568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,6 +1265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 713449868}
   hoverColor: {r: 1, g: 0.76862746, b: 0, a: 1}
+  colorChangeSpeed: 0.1
 --- !u!1 &654566718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,6 +1835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 525957874}
   hoverColor: {r: 1, g: 0.76862746, b: 0, a: 1}
+  colorChangeSpeed: 0.1
 --- !u!1 &789097757
 GameObject:
   m_ObjectHideFlags: 0
@@ -2943,6 +2947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 2122066289}
   hoverColor: {r: 1, g: 0.76862746, b: 0, a: 1}
+  colorChangeSpeed: 0.1
 --- !u!1 &1127945958
 GameObject:
   m_ObjectHideFlags: 0
@@ -3203,6 +3208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1931405237}
   hoverColor: {r: 1, g: 0.76862746, b: 0, a: 1}
+  colorChangeSpeed: 0.1
 --- !u!1 &1359062957
 GameObject:
   m_ObjectHideFlags: 0
@@ -3364,6 +3370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1995424586}
   hoverColor: {r: 1, g: 0.76862746, b: 0, a: 1}
+  colorChangeSpeed: 0.1
 --- !u!1 &1404395206
 GameObject:
   m_ObjectHideFlags: 0
@@ -3899,6 +3906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1017772359}
   hoverColor: {r: 1, g: 0.76862746, b: 0, a: 1}
+  colorChangeSpeed: 0.1
 --- !u!1 &1639448947
 GameObject:
   m_ObjectHideFlags: 0
@@ -4248,6 +4256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 452349042}
   hoverColor: {r: 1, g: 0.76862746, b: 0, a: 1}
+  colorChangeSpeed: 0.1
 --- !u!1 &1784325084
 GameObject:
   m_ObjectHideFlags: 0
@@ -4408,6 +4417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1968766437}
   hoverColor: {r: 1, g: 0.76862746, b: 0, a: 1}
+  colorChangeSpeed: 0.1
 --- !u!1 &1931405235
 GameObject:
   m_ObjectHideFlags: 0
@@ -5199,6 +5209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1043992939}
   hoverColor: {r: 1, g: 0.76862746, b: 0, a: 1}
+  colorChangeSpeed: 0.1
 --- !u!1 &2122066287
 GameObject:
   m_ObjectHideFlags: 0
@@ -5471,63 +5482,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143233921}
   m_CullTransparentMesh: 1
---- !u!1001 &1151425898841425862
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2564132579937144252, guid: 13d84059decfd184fae63b773d624b0c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2564132579937144252, guid: 13d84059decfd184fae63b773d624b0c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2564132579937144252, guid: 13d84059decfd184fae63b773d624b0c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2564132579937144252, guid: 13d84059decfd184fae63b773d624b0c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2564132579937144252, guid: 13d84059decfd184fae63b773d624b0c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2564132579937144252, guid: 13d84059decfd184fae63b773d624b0c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2564132579937144252, guid: 13d84059decfd184fae63b773d624b0c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2564132579937144252, guid: 13d84059decfd184fae63b773d624b0c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2564132579937144252, guid: 13d84059decfd184fae63b773d624b0c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2564132579937144252, guid: 13d84059decfd184fae63b773d624b0c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8873779838642261168, guid: 13d84059decfd184fae63b773d624b0c, type: 3}
-      propertyPath: m_Name
-      value: Paintbrush
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 13d84059decfd184fae63b773d624b0c, type: 3}
 --- !u!1 &4383358074203652796
 GameObject:
   m_ObjectHideFlags: 0
@@ -5629,4 +5583,3 @@ SceneRoots:
   - {fileID: 623909569}
   - {fileID: 880372018}
   - {fileID: 1938508314}
-  - {fileID: 1151425898841425862}
