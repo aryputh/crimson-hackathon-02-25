@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
         isGrounded = Physics2D.OverlapCircle(groundChecker.transform.position, groundCheckRadius, groundLayer);
 
-        if (isGrounded)
+        if (isGrounded && colorManager != null)
         {
             UpdatePlayerStatsBasedOnGround();
         }
