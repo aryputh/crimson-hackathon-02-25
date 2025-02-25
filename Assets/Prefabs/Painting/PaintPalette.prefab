@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 8306143794998445768}
   - component: {fileID: 924027792018990068}
   m_Layer: 5
-  m_Name: BlueButton
+  m_Name: TealButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.12941177, g: 0.5686275, b: 0.48235294, a: 1}
+  m_Color: {r: 0.1882353, g: 0.60784316, b: 0.5921569, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 8760261722366456330}
   - component: {fileID: 2070810790827550444}
   m_Layer: 5
-  m_Name: YellowButton
+  m_Name: OrangeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9647059, g: 0.61960787, b: 0.19215687, a: 1}
+  m_Color: {r: 0.9882353, g: 0.64705884, b: 0.039215688, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 2088266697512551997}
   - component: {fileID: 210347251711357344}
   m_Layer: 5
-  m_Name: MagentaButton
+  m_Name: BlueButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.37254903, g: 0.21176471, b: 0.45882353, a: 1}
+  m_Color: {r: 0.24313726, g: 0.42745098, b: 0.60784316, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

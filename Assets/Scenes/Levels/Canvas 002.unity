@@ -959,10 +959,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Darkness seems to be eating
 
-    all the color...
-
-
-    Mess up? R'
+    all the color...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 448622b4a7895904c9f17d008e64f72f, type: 2}
   m_sharedMaterial: {fileID: -7177743934310945379, guid: 448622b4a7895904c9f17d008e64f72f, type: 2}
@@ -971,8 +968,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285879586
-  m_fontColor: {r: 0.13333334, g: 0.33333334, b: 0.45882353, a: 1}
+    rgba: 4280032284
+  m_fontColor: {r: 0.10980392, g: 0.10980392, b: 0.10980392, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1933,7 +1930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6944007830514777376, guid: b354b2865c2a3a84ea00d731a8fc49bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.54
+      value: -3.33
       objectReference: {fileID: 0}
     - target: {fileID: 6944007830514777376, guid: b354b2865c2a3a84ea00d731a8fc49bd, type: 3}
       propertyPath: m_LocalPosition.z

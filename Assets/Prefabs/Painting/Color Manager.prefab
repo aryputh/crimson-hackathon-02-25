@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 3615163422299326125}
   - component: {fileID: 4896483577794848708}
   m_Layer: 0
-  m_Name: Yellow
+  m_Name: Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,8 +104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 9a7ca6659cb86b945bec37f97bd2f07a, type: 2}
-  colorName: yellow
-  color: {r: 0.9647059, g: 0.61960787, b: 0.19215687, a: 1}
+  colorName: orange
+  color: {r: 0.9882353, g: 0.64705884, b: 0.039215688, a: 1}
 --- !u!1 &2411105455831312527
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 3633136828337442481}
   - component: {fileID: 4014799448070842426}
   m_Layer: 0
-  m_Name: Magenta
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,8 +151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 6e0b401ad60c6a546a6c9e0621ad22a8, type: 2}
-  colorName: magenta
-  color: {r: 0.37254903, g: 0.21176471, b: 0.45882353, a: 1}
+  colorName: gravity down
+  color: {r: 0.24313726, g: 0.42745098, b: 0.60784316, a: 1}
 --- !u!1 &7181496200170005412
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 7676895262754925339}
   - component: {fileID: 2049092584411631175}
   m_Layer: 0
-  m_Name: Blue
+  m_Name: Teal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,5 +245,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 701b867c65e33a74a90e3b0de6278de7, type: 2}
-  colorName: blue
-  color: {r: 0.12941177, g: 0.5686275, b: 0.48235294, a: 1}
+  colorName: gravity up
+  color: {r: 0.1882353, g: 0.60784316, b: 0.5921569, a: 1}
