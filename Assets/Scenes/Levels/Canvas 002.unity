@@ -670,9 +670,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Darkness seems to be eating
+  m_text: 'The darkness seems to eat
 
-    all the color...'
+    the color...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3c4f506effd3b8f448bb9c67aa3095eb, type: 2}
   m_sharedMaterial: {fileID: 6909456012754014889, guid: 3c4f506effd3b8f448bb9c67aa3095eb, type: 2}
