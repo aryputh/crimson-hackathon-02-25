@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 public class GoalCheck : MonoBehaviour
 {
     [SerializeField] private int sceneIndex;
+    [SerializeField] private LevelUnlocker levelUnlocker;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             // Successful level completion, go to next screen.
-            Debug.Log("Go to next level!");
+            levelUnlocker.OnGoalReached();
             GoToNextLevel();
         }
     }

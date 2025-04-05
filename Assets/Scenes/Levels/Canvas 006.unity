@@ -231,6 +231,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8644958183857016621, guid: eb49779582a6b944489c21021650232c, type: 3}
+      propertyPath: currentLevel
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8644958183857016621, guid: eb49779582a6b944489c21021650232c, type: 3}
+      propertyPath: currentWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8644958183857016621, guid: eb49779582a6b944489c21021650232c, type: 3}
+      propertyPath: totalLevelsInWorld
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

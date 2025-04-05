@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7911504300556453305}
   - component: {fileID: 4203708533931891504}
   - component: {fileID: 6665085466389722429}
+  - component: {fileID: 8644958183857016621}
   m_Layer: 10
   m_Name: Goal
   m_TagString: Untagged
@@ -170,3 +171,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIndex: 0
+  levelUnlocker: {fileID: 8644958183857016621}
+--- !u!114 &8644958183857016621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323716215565666883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd00a111c59af0243bdb43d536515161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWorld: 0
+  currentLevel: 0
+  totalLevelsInWorld: 0
+  nextWorld: 0
+  hasNextWorld: 0
