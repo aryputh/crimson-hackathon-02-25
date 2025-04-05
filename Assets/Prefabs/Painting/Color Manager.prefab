@@ -48,17 +48,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e247548953ffdd4ea459b9d3ea4c3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brushColors:
-  - {fileID: 7752610968819826188}
-  - {fileID: 4896483577794848708}
-  - {fileID: 2049092584411631175}
-  - {fileID: 4014799448070842426}
-  paletteColors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  colorDetails:
+  - isUsable: 1
+    brushColor: {fileID: 7752610968819826188}
+    paletteUiSelection: {fileID: 0}
+  - isUsable: 0
+    brushColor: {fileID: 4896483577794848708}
+    paletteUiSelection: {fileID: 0}
+  - isUsable: 0
+    brushColor: {fileID: 2049092584411631175}
+    paletteUiSelection: {fileID: 0}
+  - isUsable: 0
+    brushColor: {fileID: 4014799448070842426}
+    paletteUiSelection: {fileID: 0}
   currentColorIndex: 0
+  selectedScale: 1.1
+  normalScale: 1
+  pulseSpeed: 2
 --- !u!1 &1200921618597300887
 GameObject:
   m_ObjectHideFlags: 0
@@ -70,7 +76,7 @@ GameObject:
   - component: {fileID: 3615163422299326125}
   - component: {fileID: 4896483577794848708}
   m_Layer: 0
-  m_Name: Orange
+  m_Name: Speed Up Lower Jump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 9a7ca6659cb86b945bec37f97bd2f07a, type: 2}
-  colorName: orange
+  colorName: speed up lower jump
   color: {r: 0.9882353, g: 0.64705884, b: 0.039215688, a: 1}
 --- !u!1 &2411105455831312527
 GameObject:
@@ -117,7 +123,7 @@ GameObject:
   - component: {fileID: 3633136828337442481}
   - component: {fileID: 4014799448070842426}
   m_Layer: 0
-  m_Name: Blue
+  m_Name: Gravity Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +170,7 @@ GameObject:
   - component: {fileID: 8482375793760478933}
   - component: {fileID: 7752610968819826188}
   m_Layer: 0
-  m_Name: Black
+  m_Name: Original
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: c428b4bed5339f44b940aaa46f797671, type: 2}
-  colorName: black
+  colorName: original
   color: {r: 0.1882353, g: 0.1882353, b: 0.1882353, a: 1}
 --- !u!1 &8459000217776341840
 GameObject:
@@ -211,7 +217,7 @@ GameObject:
   - component: {fileID: 7676895262754925339}
   - component: {fileID: 2049092584411631175}
   m_Layer: 0
-  m_Name: Teal
+  m_Name: Gravity Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
